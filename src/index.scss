@@ -1,0 +1,13 @@
+@import '@carbon/colors/scss/mixins';
+@import '@carbon/themes/scss/themes';
+
+$carbon--theme: $carbon--theme--g100;
+@include carbon--theme();
+
+@import 'carbon-components/scss/globals/scss/styles.scss';
+
+@include carbon--colors();
+
+$feature-flags: (
+    grid-columns-16: true,
+);
