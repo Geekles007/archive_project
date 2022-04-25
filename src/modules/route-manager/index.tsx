@@ -5,6 +5,7 @@ import {ROUTES} from "../../constants";
 import LoginUI from "../login";
 import PrivateRoute from "../../common/PrivateRoute";
 import {Redirect, Route, BrowserRouter as Router, Switch} from "react-router-dom";
+import Container from "../container";
 
 const RouteManagerWrapper = styled.div`
 
@@ -22,10 +23,13 @@ const RouteManager = ({}: RouteManagerProps) => {
                 <Route exact path={`/${ROUTES.login}`}>
                     <LoginUI/>
                 </Route>
-                <PrivateRoute path={`/${ROUTES.main}`}>
-                    {/*<Container/>*/}
-                    <h4>Container</h4>
-                </PrivateRoute>
+                {/*<PrivateRoute path={`/${ROUTES.main}`}>*/}
+                {/*    /!*<Container/>*!/*/}
+                {/*    <h4>Container</h4>*/}
+                {/*</PrivateRoute>*/}
+                <Route path={`/${ROUTES.main}`}>
+                    <Container/>
+                </Route>
                 <Route path="*">
                     <Redirect to={`/${ROUTES.login}`}/>
                 </Route>

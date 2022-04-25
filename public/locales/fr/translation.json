@@ -1,3 +1,9 @@
 {
-  "appName": "thinArchive"
+  "appName": "thinArchive",
+  "usersModuleTitle": "Gestion des utilisateurs",
+  "grantsModuleTitle": "Roles & Permissions",
+  "filesModuleTitle": "Gestion des archives",
+  "nothingFoundText": "Aucune ressources trouvées",
+  "loadingText": "Chargement",
+  "refreshText": "Rafraîchir"
 }

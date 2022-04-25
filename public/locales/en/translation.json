@@ -1,3 +1,9 @@
 {
-  "appName": "thinArchive"
+  "appName": "thinArchive",
+  "usersModuleTitle": "Users management",
+  "grantsModuleTitle": "Roles & Permissions",
+  "filesModuleTitle": "Archive manager",
+  "nothingFoundText": "Nothing found",
+  "loadingText": "Loading",
+  "refreshText": "Refresh"
 }

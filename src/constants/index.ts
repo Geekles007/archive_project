@@ -15,6 +15,9 @@ export const ROUTES = {
 
 export const containerRoutes = {
     DASHBOARD_ROUTE: "main",
+    USER_ROUTE: "users",
+    ROLE_PERMISSION_ROUTE: "roles-permissions",
+    FILE_ROUTE: "file-manager",
 }
 
 export const routeNameMatcher: {[arg: string]: string} = {

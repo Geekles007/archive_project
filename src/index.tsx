@@ -4,14 +4,19 @@ import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "./config";
+import { Router } from "react-router";
+import { createBrowserHistory } from 'history';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+const history = createBrowserHistory();
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Router history={history}>
+        <App />
+    </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function

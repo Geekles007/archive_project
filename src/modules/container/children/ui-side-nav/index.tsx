@@ -4,6 +4,7 @@ import ContainerController, {ILink} from "../../controller";
 import {Fade16} from "@carbon/icons-react";
 import {useLocation, useRouteMatch} from "react-router";
 import {useHistory} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 interface UISideNavProps {
     isSideNavExpanded: boolean;
@@ -11,12 +12,13 @@ interface UISideNavProps {
 }
 
 const UISideNav = ({isSideNavExpanded, setName}: UISideNavProps) => {
-    let {url} = useRouteMatch();
+    const {t} = useTranslation("translation", {useSuspense: false});
     let {pathname} = useLocation();
+    const {url} = useRouteMatch();
     const history = useHistory();
 
     const changePage = (link: ILink) => {
-        history.push(link.route ?? "/");
+        history.push(`${url}/${link.route}`);
         setName(link.name);
     }
 
@@ -27,11 +29,11 @@ const UISideNav = ({isSideNavExpanded, setName}: UISideNavProps) => {
             expanded={isSideNavExpanded}>
             <SideNavItems>
                 {
-                    ContainerController.links.map((item: ILink) => {
+                    ContainerController.getLinks(t).map((item: ILink) => {
                         if(item.route) {
                             return <SideNavLink
                                 key={item.id}
-                                aria-current={`${item.route}` === pathname ? 'page' : undefined}
+                                aria-current={`${url}/${item.route}` === pathname ? 'page' : undefined}
                                 renderIcon={item.icon ?? Fade16} onClick={() => changePage(item)}>
                                 {item.name}
                             </SideNavLink>
