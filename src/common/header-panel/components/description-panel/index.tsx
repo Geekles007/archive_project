@@ -86,7 +86,7 @@ const DescriptionPanel: React.FC<DescriptionPanelProps> = ({
                 </div>
                 {
                     description ? <div className="column-item">
-                        <strong>{t('description-text')}</strong>
+                        <strong>{t('descriptionText')}</strong>
                         <span>{description}</span>
                     </div> : <></>
                 }

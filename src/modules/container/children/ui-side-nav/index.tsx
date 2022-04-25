@@ -5,6 +5,7 @@ import {Fade16} from "@carbon/icons-react";
 import {useLocation, useRouteMatch} from "react-router";
 import {useHistory} from "react-router-dom";
 import {useTranslation} from "react-i18next";
+import PermissionHandler from "../../../../common/permission-handler";
 
 interface UISideNavProps {
     isSideNavExpanded: boolean;
@@ -31,25 +32,26 @@ const UISideNav = ({isSideNavExpanded, setName}: UISideNavProps) => {
                 {
                     ContainerController.getLinks(t).map((item: ILink) => {
                         if(item.route) {
-                            return <SideNavLink
-                                key={item.id}
+                            return <PermissionHandler permissionTitle={item?.permission}
+                                                      key={item.id}><SideNavLink
                                 aria-current={`${url}/${item.route}` === pathname ? 'page' : undefined}
                                 renderIcon={item.icon ?? Fade16} onClick={() => changePage(item)}>
                                 {item.name}
-                            </SideNavLink>
+                            </SideNavLink></PermissionHandler>
                         } else if(item.subRoutes && item.subRoutes.length > 0) {
-                            return <SideNavMenu key={item.id} renderIcon={item.icon ?? Fade16} title={item.name ?? ""}>
+                            return <PermissionHandler permissionTitle={item?.permission}
+                                                      key={item.id}><SideNavMenu renderIcon={item.icon ?? Fade16} title={item.name ?? ""}>
                                 {
                                     item.subRoutes.map((link: ILink) => {
-                                        return <SideNavMenuItem
-                                            key={link.id}
+                                        return <PermissionHandler permissionTitle={link?.permission}
+                                                                  key={link.id}><SideNavMenuItem
                                             aria-current={`${link.route}` === pathname ? 'page' : undefined}
                                             onClick={() => changePage(link)}>
                                             {link.name}
-                                        </SideNavMenuItem>
+                                        </SideNavMenuItem></PermissionHandler>
                                     })
                                 }
-                            </SideNavMenu>
+                            </SideNavMenu></PermissionHandler>
                         }
                         return <></>
                     })

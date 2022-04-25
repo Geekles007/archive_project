@@ -35,7 +35,7 @@ const ErrorBoundary = ({onReset, children, title, description, actionTitle}: Err
         <Boundarer resetKeys={[explode]} onError={myErrorHandler}
                    fallback={<FallBackResult title={title} description={description} actionTitle={actionTitle}
                                              onReset={onReset ?? refresh}/>}>
-            {explode ? <InlineLoading description={t("loading-text")}/> : children}
+            {explode ? <InlineLoading description={t("loadingText")}/> : children}
         </Boundarer>
     );
 

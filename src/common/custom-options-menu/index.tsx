@@ -5,6 +5,8 @@ import { OverflowMenu, OverflowMenuItem, OverflowMenuItemButtonProps } from "car
 import { Route } from 'react-router-dom'
 import {useTranslation} from "react-i18next";
 import KeyBuilder from "../../utils/KeyBuilder";
+import PermissionHandler from "../permission-handler";
+import checkPermission from "../../utils/CheckPermission";
 
 export type CustomProps = {
     permission?: string;
@@ -28,9 +30,9 @@ const CustomOptionsMenu: React.FC<CustomOptionsMenuProps> = ({menus, flipped = f
                 {
                     menus?.map((item: CustomProps) => {
                         return (
-                            // <PermissionHandler permission={item.permission} key={buildKey()}>
-                                <OverflowMenuItem itemText={t(item.text || "") as string} onClick={() => item.func(row)} key={KeyBuilder.build}/>
-                            // </PermissionHandler>
+                                checkPermission(item?.permission) ? <OverflowMenuItem itemText={t(item.text || "") as string}
+                                                                                      onClick={() => item.func(row)}
+                                                                                      key={KeyBuilder.build}/> : null
                         );
                     })
                 }

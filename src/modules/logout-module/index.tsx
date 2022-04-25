@@ -46,7 +46,7 @@ const LogoutModuleUI: React.FC<LogoutModuleUIProps> = ({}) => {
                     loading || succeed.state ?
                         <InlineLoading
                             style={{ marginLeft: '1rem' }}
-                            description={loading ? t('loading-text') : t('goodbye-message')}
+                            description={loading ? t('loadingText') : t('goodbye-message')}
                             status={succeed.state ? 'finished' : 'active'}
                             aria-live={"polite"}
                         /> : (

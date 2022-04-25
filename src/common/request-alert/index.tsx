@@ -24,7 +24,7 @@ const RequestAlert: React.FC<{
     if(loading) {
         answer = (
             <div>
-                <InlineLoading description={t('loading-text')} />
+                <InlineLoading description={t('loadingText')} />
             </div>
         )
     }

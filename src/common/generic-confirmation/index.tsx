@@ -126,7 +126,7 @@ const GenericConfirmation = ({
                     loading || succeed.state ?
                         <InlineLoading
                             style={{marginLeft: '1rem'}}
-                            description={loading ? t('loading-text') : t('operation-finished')}
+                            description={loading ? t('loadingText') : t('operation-finished')}
                             status={succeed.state ? 'finished' : 'active'}
                             aria-live={"polite"}
                         /> : (

@@ -15,6 +15,7 @@ export interface ILink {
     id: string;
     name: string;
     route?: string;
+    permission?: string;
     icon?: CarbonIconType;
     subRoutes?: ILink[];
 }
@@ -32,18 +33,21 @@ class ContainerController {
             {
                 id: KeyBuilder.build,
                 name: t("usersModuleTitle"),
+                permission: "USER_MODULE",
                 route: containerRoutes.USER_ROUTE,
                 icon: User16
             },
             {
                 id: KeyBuilder.build,
                 name: t("grantsModuleTitle"),
+                permission: "ROLE_PERMISSION_MODULE",
                 route: containerRoutes.ROLE_PERMISSION_ROUTE,
                 icon: DataBase16
             },
             {
                 id: KeyBuilder.build,
                 name: t("filesModuleTitle"),
+                permission: "FILE_MANAGER_MODULE",
                 route: containerRoutes.FILE_ROUTE,
                 icon: PresentationFile16
             },

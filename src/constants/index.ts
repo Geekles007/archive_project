@@ -10,11 +10,12 @@ export const ROUTES = {
     login: "auth",
     createUser: "create-user",
     main: "main",
-    recovery: "recovery"
+    recovery: "recovery",
+    notFound: "not-found"
 }
 
 export const containerRoutes = {
-    DASHBOARD_ROUTE: "main",
+    DASHBOARD_ROUTE: "",
     USER_ROUTE: "users",
     ROLE_PERMISSION_ROUTE: "roles-permissions",
     FILE_ROUTE: "file-manager",

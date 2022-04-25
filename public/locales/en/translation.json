@@ -5,5 +5,20 @@
   "filesModuleTitle": "Archive manager",
   "nothingFoundText": "Nothing found",
   "loadingText": "Loading",
-  "refreshText": "Refresh"
+  "refreshText": "Refresh",
+  "descriptionText": "Description",
+  "userListText": "User's list",
+  "userListDescriptionText": "This is the user management module, you can perform every actions related to users here.",
+  "editText": "Edit",
+  "editModalTitle": "Edit user's informations",
+  "pageNotFoundText": "Oh no! Nothing found.",
+  "goBackButtonText": "Go back",
+  "phoneNumberText": "Phone number",
+  "profileText": "Profile",
+  "roleListText": "Role's list",
+  "roleListDescriptionText": "The role module will allow you to manage role and allocate permissions to roles",
+  "searchText": "Search",
+  "seeDetailsText": "See details",
+  "deleteText": "Delete",
+  "managePermissionsText": "Manage permissions"
 }

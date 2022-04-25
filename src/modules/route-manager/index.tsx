@@ -6,6 +6,7 @@ import LoginUI from "../login";
 import PrivateRoute from "../../common/PrivateRoute";
 import {Redirect, Route, BrowserRouter as Router, Switch} from "react-router-dom";
 import Container from "../container";
+import NotFound from "../not-found";
 
 const RouteManagerWrapper = styled.div`
 
@@ -30,8 +31,11 @@ const RouteManager = ({}: RouteManagerProps) => {
                 <Route path={`/${ROUTES.main}`}>
                     <Container/>
                 </Route>
+                <Route path={`/${ROUTES.notFound}`}>
+                    <NotFound/>
+                </Route>
                 <Route path="*">
-                    <Redirect to={`/${ROUTES.login}`}/>
+                    <Redirect to={`/${ROUTES.notFound}`}/>
                 </Route>
             </Switch>
         </Router>

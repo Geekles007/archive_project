@@ -9,6 +9,7 @@ import {ProvideAuth} from "./common/PrivateRoute";
 import RouteManager from "./modules/route-manager";
 import { Provider } from 'mobx-react';
 import FileStore from "./stores/FileStore";
+import UserStore from "./stores/UserStore";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <ApolloProvider client={ApiClient}>
           <Provider
               DialogStore={DialogStore}
+              UserStore={UserStore}
               FileStore={FileStore}
           >
             <RouteManager/>

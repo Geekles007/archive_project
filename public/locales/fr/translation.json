@@ -5,5 +5,20 @@
   "filesModuleTitle": "Gestion des archives",
   "nothingFoundText": "Aucune ressources trouvées",
   "loadingText": "Chargement",
-  "refreshText": "Rafraîchir"
+  "refreshText": "Rafraîchir",
+  "descriptionText": "Description",
+  "userListText": "Liste des utilisateurs",
+  "userListDescriptionText": "C'est le module de gestion des utilisateurs, vous pouvez effectuer toutes les actions liées aux utilisateurs ici.",
+  "editText": "Modifier",
+  "editModalTitle": "Modifier les informations de cet utilisateur",
+  "pageNotFoundText": "Cette page n'est pas disponible",
+  "goBackButtonText": "Aller a la page précédente",
+  "phoneNumberText": "Numéro de téléphone",
+  "profileText": "Profil",
+  "roleListText": "Liste des roles",
+  "roleListDescriptionText": "Le module de rôle vous permettra de gérer les rôles et d'allouer des permissions aux rôles.",
+  "searchText": "Rechercher",
+  "seeDetailsText": "Voir les détails",
+  "deleteText": "Supprimer",
+  "managePermissionsText": "Gérer les permissions"
 }

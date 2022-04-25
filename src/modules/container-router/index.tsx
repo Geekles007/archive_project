@@ -4,6 +4,9 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import ContainerRouterController, {IContainerRoute} from "./controller";
 import KeyBuilder from "../../utils/KeyBuilder";
 import {useRouteMatch} from "react-router";
+import RouteValidator from "../../common/route-validator";
+import {ROUTES} from "../../constants";
+import NotFound from "../not-found";
 
 interface ContainerRouterProps {
 
@@ -21,9 +24,9 @@ const ContainerRouter = ({}: ContainerRouterProps) => {
             <Switch>
                 {
                     ContainerRouterController.routes.map((route: IContainerRoute) => {
-                        return <Route exact={route.exact} key={KeyBuilder.build} path={`${url}/${route.route}`}>
+                        return <RouteValidator permission={route.permission} exact={route.exact} key={KeyBuilder.build} path={`${url}/${route.route}`}>
                             {route.module}
-                        </Route>
+                        </RouteValidator>
                     })
                 }
             </Switch>

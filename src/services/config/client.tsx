@@ -29,11 +29,12 @@ class Client {
                 }
             });
             if(this.connected && this.connected.expiredIn < parseInt(DateTime.fromJSDate(new Date()).toFormat("x"))) {
-                DialogStore.openFromOutside({
-                    title: "Confirmation",
-                    content: <TokenRefresher />,
-                    size: "sm"
-                })
+                // TODO remove comment here
+                // DialogStore.openFromOutside({
+                //     title: "Confirmation",
+                //     content: <TokenRefresher />,
+                //     size: "sm"
+                // })
             }
             return forward(operation);
         })

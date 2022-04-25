@@ -36,7 +36,7 @@ const FromControlObject = <V extends BaseProps>({
 
     form?.register({name: name}, {required: false});
 
-    if (all.loading) return <InlineLoading description={t('loading-text')}/>;
+    if (all.loading) return <InlineLoading description={t('loadingText')}/>;
     if (all.error) return <EmptyStateUI title={t("Nothing found!")}/>;
 
     const message = form?.errors[name]?.message ?? `Invalid value for the ${name}`;
