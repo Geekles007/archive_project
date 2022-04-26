@@ -78,7 +78,7 @@ const RolesHandler = ({}: RolesHandlerProps) => {
                     className={"search"}
                     placeHolderText={t("searchText")}
                     onChange={onChangeHandler}
-                />} refresh={refreshComponent} />
+                />} refresh={refreshComponent} add={() => {}} titleNew={t("addNew")} />
             <ListSwitcher refetch={refetch} loading={loading} retrieveAttributes={"retrieveRoles"} count={10} fetchMore={fetchMore}
                           data={data} render={(refresher: string, data: any) => <RolesViewer key={refresher} data={data} refetch={refetch} />}/>
         </RolesHandlerWrapper>

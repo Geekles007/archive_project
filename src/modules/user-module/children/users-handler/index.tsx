@@ -12,6 +12,7 @@ import {Search} from "carbon-components-react";
 import ListSwitcher from "../../../../common/list-switcher";
 import UsersViewer from "../users-viewer";
 import {gray90} from "@carbon/colors";
+import {useTranslation} from "react-i18next";
 
 interface UsersHandlerProps {
 
@@ -27,6 +28,7 @@ const UsersHandler = ({}: UsersHandlerProps) => {
 
     const [input, setInput] = useState<string | undefined>();
     const [policy, setPolicy] = useState<WatchQueryFetchPolicy>("no-cache");
+    const {t} = useTranslation("translation", {useSuspense: false});
 
     const [executeSearch, {data, fetchMore, loading, refetch}] = useLazyQuery<IConnection<IUser>>(
         input && input !== "" ? SEARCH_USERS : RETRIEVE_USERS,{
@@ -76,7 +78,7 @@ const UsersHandler = ({}: UsersHandlerProps) => {
                     className={"search"}
                     placeHolderText="поиска"
                     onChange={onChangeHandler}
-                />} refresh={refreshComponent} />
+                />} refresh={refreshComponent} add={() => {}} titleNew={t("addNew")} />
             <ListSwitcher refetch={refetch} loading={loading} retrieveAttributes={"retrieveUsers"} count={10} fetchMore={fetchMore}
                           data={data} render={(refresher: string, data: any) => <UsersViewer key={refresher} data={data} refetch={refetch} />}/>
         </UsersHandlerWrapper>

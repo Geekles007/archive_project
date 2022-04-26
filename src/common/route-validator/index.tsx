@@ -24,7 +24,7 @@ export default function RouteValidator({ children, permission, ...rest }: any) {
                 ) : (
                     <Redirect
                         to={{
-                            pathname: "/" + ROUTES.notFound,
+                            pathname: "/main/" + ROUTES.notFound,
                             state: { from: location }
                         }}
                     />

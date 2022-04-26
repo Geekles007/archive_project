@@ -6,10 +6,8 @@ import HeaderPanel from "../../common/header-panel";
 import RolesHandler from "./children/roles-handler";
 import {Redirect, Route, Switch} from "react-router-dom";
 import {useRouteMatch} from "react-router";
-import RoleDetails from "./children/role-details";
 import RouteValidator from "../../common/route-validator";
-import {ROUTES} from "../../constants";
-import NotFound from "../not-found";
+import RoleDetails from "../role-details";
 
 interface RolePermissionModuleProps {
 

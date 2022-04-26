@@ -20,5 +20,8 @@
   "searchText": "Rechercher",
   "seeDetailsText": "Voir les détails",
   "deleteText": "Supprimer",
-  "managePermissionsText": "Gérer les permissions"
+  "managePermissionsText": "Gérer les permissions",
+  "addNew": "Ajouter nouveau",
+  "addPermissionsText": "Ajouter permissions",
+  "cancelText": "Annuler"
 }

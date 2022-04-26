@@ -31,11 +31,8 @@ const RouteManager = ({}: RouteManagerProps) => {
                 <Route path={`/${ROUTES.main}`}>
                     <Container/>
                 </Route>
-                <Route path={`/${ROUTES.notFound}`}>
-                    <NotFound/>
-                </Route>
                 <Route path="*">
-                    <Redirect to={`/${ROUTES.notFound}`}/>
+                    <Redirect to={`/${ROUTES.login}`}/>
                 </Route>
             </Switch>
         </Router>

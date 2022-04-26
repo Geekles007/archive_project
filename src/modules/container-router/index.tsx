@@ -29,6 +29,12 @@ const ContainerRouter = ({}: ContainerRouterProps) => {
                         </RouteValidator>
                     })
                 }
+                <Route path={`${url}/${ROUTES.notFound}`}>
+                    <NotFound/>
+                </Route>
+                <Route path="*">
+                    <Redirect to={`${url}/${ROUTES.notFound}`}/>
+                </Route>
             </Switch>
     </RouterWrapper>
 
