@@ -23,5 +23,7 @@
   "managePermissionsText": "Manage permissions",
   "addNew": "Add new",
   "addPermissionsText": "Add permissions",
-  "cancelText": "Cancel"
+  "cancelText": "Cancel",
+  "fileManagerTitle": "Archive manager",
+  "createNewFolderText": "Create a new folder"
 }

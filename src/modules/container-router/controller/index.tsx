@@ -2,6 +2,7 @@ import {containerRoutes} from "../../../constants";
 import ErrorBoundary from "../../../common/error-boundary";
 import UserModule from "../../user-module";
 import RolePermissionModule from "../../roles-permissions-module";
+import FileManager from "../../file-manager";
 
 export interface IContainerRoute {
     module: JSX.Element;
@@ -32,7 +33,7 @@ class ContainerRouterController {
             exact: false
         },
         {
-            module: <ErrorBoundary><>Files</></ErrorBoundary>,
+            module: <ErrorBoundary><FileManager /></ErrorBoundary>,
             route: containerRoutes.FILE_ROUTE,
             permission: "FILE_MANAGER_MODULE",
             exact: false
