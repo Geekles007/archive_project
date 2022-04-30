@@ -10,7 +10,7 @@ const FileManagerWrapper = styled.div`
   padding: 1em;
   
   .head {
-    height: 3em;
+    height: 3.5em;
   }
   
   ._flex {
