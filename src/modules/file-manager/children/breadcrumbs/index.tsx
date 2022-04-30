@@ -11,7 +11,7 @@ interface BreadCrumbsProps {
 
 const BreadCrumbs = ({}: BreadCrumbsProps) => {
 
-    return <BreadCrumbsWrapper>
+    return <BreadCrumbsWrapper role={"breadcrumb"}>
         BreadCrumbs
     </BreadCrumbsWrapper>
 
