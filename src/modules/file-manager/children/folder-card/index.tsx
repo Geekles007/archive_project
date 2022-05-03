@@ -2,9 +2,9 @@ import React, {memo} from "react";
 import styled from "styled-components";
 import {gray50} from "@carbon/colors";
 import {Folder24} from "@carbon/icons-react";
-import {Tile} from "carbon-components-react";
+import {ClickableTile, Tile} from "carbon-components-react";
 
-const FolderCardWrapper = styled(Tile)`
+const FolderCardWrapper = styled(ClickableTile)`
   margin-top: 1em;
   height: 200px;
   
@@ -28,7 +28,6 @@ const FolderCard = ({}: FolderCardProps) => {
 
     return <FolderCardWrapper>
         <Folder24 />
-
         <div className="_ffooter">
             <h4>No Name</h4><br />
             <span>23 files</span>
